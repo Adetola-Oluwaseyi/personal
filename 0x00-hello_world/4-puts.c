@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
  * main - the main function
@@ -10,3 +10,4 @@ int main(void)
 	puts("\"Programming is like building a multilingual puzzle");
 	return(0);
 }
+
