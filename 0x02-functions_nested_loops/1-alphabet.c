@@ -1,5 +1,5 @@
 #include <stdio.h>
-void print_alphabet(void)
+void print_alphabet(void);
 
 /**
  * main - entry point
@@ -20,7 +20,7 @@ void print_alphabet(void)
 {
 	char a;
 
-	(for a = 'a'; a <= 'z'; a++)
+	for (a = 'a'; a <= 'z'; a++)
 	{
 		putchar(a);
 	}
