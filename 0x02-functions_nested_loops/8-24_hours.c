@@ -12,11 +12,11 @@ void jack_bauer(void)
 	{
 		for (b = 0; b < 10; b++)
 		{
-			for (c = 0; c < 7; c++)
+			for (c = 0; c < 6; c++)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					if (((a == 2) && (b > 3)) || ((c == 6) && (d > 0)))
+					if ((a == 2) && (b > 3))
 					{
 					}
 
