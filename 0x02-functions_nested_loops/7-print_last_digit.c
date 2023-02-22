@@ -22,9 +22,12 @@ int print_last_digit(int a)
 		return (0);
 	}
 
-	b = a % 10;
+	else
+	{
+		b = a % 10;
 
-	_putchar(b + '0');
+		_putchar(b + '0');
+	}
 	return (b);
 }
 
