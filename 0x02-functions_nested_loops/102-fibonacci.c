@@ -11,10 +11,10 @@ void fibo_num(void)
 	unsigned long int second = 2;
 
 	printf("%ld, %ld, ", first, second);
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 48; i++)
 	{
 		next = first + second;
-		if (i == 49)
+		if (i == 47)
 		{
 			printf("%ld", next);
 		}
