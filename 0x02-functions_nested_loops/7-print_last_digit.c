@@ -18,6 +18,7 @@ int print_last_digit(int a)
 
 	else if (a == 0)
 	{
+		_putchar(a + '0');
 		return (0);
 	}
 
