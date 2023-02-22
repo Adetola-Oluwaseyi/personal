@@ -1,17 +1,4 @@
-#include <stdio.h>
-void print_alphabet(void);
-
-/**
- * main - entry point
- *
- * Description: calls the print_alphabet function
- * Return: Always 0 (success)
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
+#include "main.h"
 
 /**
  * print_alphabet - prints the alphabet in lowercase
@@ -22,7 +9,8 @@ void print_alphabet(void)
 
 	for (a = 'a'; a <= 'z'; a++)
 	{
-		putchar(a);
+		_putchar(a);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
+
