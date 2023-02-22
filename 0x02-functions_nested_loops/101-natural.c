@@ -16,7 +16,7 @@ void natural(void)
 			ans += i;
 		}
 	}
-	printf("%d", ans);
+	printf("%d\n", ans);
 }
 
 /**
