@@ -6,7 +6,7 @@
 void fibo_num(void)
 {
 	int i;
-	unsigned long long next;
+	unsigned long long int next;
 	unsigned long long int first = 1;
 	unsigned long long int second = 2;
 
