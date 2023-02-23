@@ -15,9 +15,9 @@ void more_numbers(void)
 			{
 				_putchar(1 + '0');
 			}
-			int k = j % 10;
+			k = j % 10;
 
-			_puthcar(k + '0');
+			_putchar(k + '0');
 		}
 		_putchar('\n');
 	}
