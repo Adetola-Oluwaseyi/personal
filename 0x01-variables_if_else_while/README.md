@@ -89,15 +89,5 @@ implementing `while` and 'for' loops.
     * Prints only the smallest combination of three digits.
     * Numbers are printed in ascending order.
 
-* **13. Software is eating the World**
-  * [102-print_comb5.c](./102-print_comb5.c): C program that prints all possible combinations
-  of two-digit numbers using only the `putchar` function exactly eight times without any
-  variables of type `char`:
-    * Numbers range from `0` to `99`.
-    * Two numbers are separated by a space.
-    * Numbers are printed with two digits [ie. `1` is printed as `01`].
-    * `00 01` and `01 00` are considered the same as the combination of of the numbers `0` and `1`.
-    * Combinations of numbers are separated by `,`, followed by a space.
-    * Combinations of numbers are printed in ascending order.
 ***
 This was quite an interesting tour!!
