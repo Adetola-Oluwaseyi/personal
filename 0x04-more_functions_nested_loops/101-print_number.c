@@ -20,7 +20,7 @@ void print_number(int n)
 	{
 		i *= 10;
 	}
-	
+
 	m = i / 10;
 	l = o % 10;
 
