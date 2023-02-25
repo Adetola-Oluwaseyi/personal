@@ -6,21 +6,30 @@
  */
 void print_number(int n)
 {
-	int i;
+	int i, j, k, l, m, o;
 
 	i = 10;
-	while (n / i > 0)
+	o = n;
+	if (o < 0)
+	{
+		o *= -1;
+		_putchar('-');
+	}
+
+	while (o / i > 0)
 	{
 		i *= 10;
 	}
+	
+	m = i / 10;
+	l = o % 10;
 
-	int m = i / 10;
-	int j;
-
-	for (; m >= 10; m / 10)
+	for (; m >= 10; m /= 10)
 	{
-		j = n % m;
-		_putchar(j + '0')
+		j = o / m;
+		k = j % 10;
+		_putchar(k + '0');
 	}
+	_putchar(l + '0');
 }
 
