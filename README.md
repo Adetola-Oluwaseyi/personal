@@ -34,5 +34,3 @@ working in the C language. I update this repo with my learning progress with han
 
 ## Author 
 + Oluwaseyi Adetola
-
----
