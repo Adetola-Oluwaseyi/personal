@@ -10,9 +10,9 @@ void puts2(char *str)
 	int i, j, count;
 
 	count = 0;
-	if (s[0] != '\0')
+	if (str[0] != '\0')
 	{
-		for (i = 0; s[i] != '\0'; i++)
+		for (i = 0; str[i] != '\0'; i++)
 		{
 			count = i;
 		}
@@ -25,3 +25,4 @@ void puts2(char *str)
 	}
 	_putchar('\n');
 }
+
