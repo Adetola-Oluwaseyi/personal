@@ -6,10 +6,10 @@
  */
 void rev_string(char *s)
 {
-	int i, count;
-	int j = 0;
-	char b[] = *s;
+	int i, j, count, half;
+	char b;
 
+	j = 0;
 	count = 0;
 	if (s[0] != '\0')
 	{
@@ -18,13 +18,15 @@ void rev_string(char *s)
 			count = i;
 		}
 
-		for (; count >= 0; count--)
+		half = (count + 1) - ((count + 1) / 2);
+		for (; count > half; count--)
 		{
-			b[j] = s[count];
+			b = s[j];
+			s[j] = s[count];
+			s[count] = b;
 
 			j++;
 		}
-		s = b;
 	}
 }
 
