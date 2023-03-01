@@ -13,12 +13,12 @@ void rev_string(char *s)
 	count = 0;
 	if (s[0] != '\0')
 	{
-		for (i = -1; s[i] != '\0'; i++)
+		for (i = 0; s[i] != '\0'; i++)
 		{
 			count = i;
 		}
 
-		half = (count + 1) - ((count + 1) / 2);
+		half = (count - (count / 2)) - 1;
 		for (; count > half; count--)
 		{
 			b = s[j];
