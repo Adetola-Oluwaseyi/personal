@@ -18,7 +18,7 @@ char *_strncat(char *dest, char *src, int n)
 		count = i;
 	}
 	count += 1;
-	for (i = 0; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
 		if (src[i] == '\0')
 		{
