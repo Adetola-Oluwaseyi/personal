@@ -11,7 +11,7 @@ char *leet(char *c)
 	int i, j;
 	char words[6] = {'a', 'e', 'o', 't', 'l'};
 	int num[5] = {52, 51, 48, 55, 49};
-	
+
 	for (i = 0; c[i] != '\0'; i++)
 	{
 		for (j = 0; words[j] != '\0'; j++)
