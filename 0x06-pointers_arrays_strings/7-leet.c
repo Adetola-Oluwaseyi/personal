@@ -8,29 +8,18 @@
  */
 char *leet(char *c)
 {
-	int i;
-
+	int i, j;
+	char words[6] = {'a', 'e', 'o', 't', 'l'};
+	int num[5] = {52, 51, 48, 55, 49};
+	
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (c[i] == 65 || c[i] == 97)
+		for (j = 0; words[j] != '\0'; j++)
 		{
-			c[i] = 52;
-		}
-		else if (c[i] == 'e' || c[i] == 'E')
-		{
-			c[i] = 51;
-		}
-		else if (c[i] == 'o' || c[i] == 'O')
-		{
-			c[i] = 48;
-		}
-		else if (c[i] == 't' || c[i] == 'T')
-		{
-			c[i] = 55;
-		}
-		else if (c[i] == 'l' || c[i] == 'L')
-		{
-			c[i] = 49;
+			if (c[i] == words[j] || (c[i] + 32) == words[j])
+			{
+				c[i] = num[j];
+			}
 		}
 	}
 
