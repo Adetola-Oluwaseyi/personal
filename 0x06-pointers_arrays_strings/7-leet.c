@@ -4,7 +4,7 @@
  * leet - encodes a string into 1337
  * @c: string argument
  *
- * Return: encoded string
+ * Return: pointer to encoded string
  */
 char *leet(char *c)
 {
