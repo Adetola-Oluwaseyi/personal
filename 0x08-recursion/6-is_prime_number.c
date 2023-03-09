@@ -2,7 +2,7 @@
 
 int prime(int, int);
 /**
- * is_prime - determines if a number is a prime number
+ * is_prime_number - determines if a number is a prime number
  * @n: integer number that is tested
  *
  * Return: 1 if number is prime
