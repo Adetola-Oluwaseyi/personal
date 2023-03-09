@@ -8,7 +8,7 @@ int prime(int, int);
  * Return: 1 if number is prime
  * 0 otherwise
  */
-int is_prime(int n)
+int is_prime_number(int n)
 {
 	int num = 2;
 
