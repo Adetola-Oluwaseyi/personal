@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int coin_count(int);
 /**
  * main - prints the minimum number of coins to
  * make change for an amount of money
@@ -27,6 +28,21 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
+	count = coin_count(amount);
+	printf("%d\n", count);
+	return (0);
+}
+
+/**
+ * coin_count - performs computation
+ * @amount: amount of cents to give back
+ *
+ * Return: minimum number of coins to make change for an amount of money
+ */
+int coin_count(int amount)
+{
+	int count = 0;
+
 	for (; amount > 0;)
 	{
 		if (amount >= 25)
@@ -55,6 +71,6 @@ int main(int argc, char *argv[])
 			amount--;
 		}
 	}
-	printf("%d\n", count);
-	return (0);
+	return (count);
 }
+
