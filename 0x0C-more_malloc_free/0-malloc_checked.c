@@ -9,7 +9,7 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	int *p;
+	void *p;
 
 	if (b == 0)
 		return (NULL);
@@ -18,7 +18,6 @@ void *malloc_checked(unsigned int b)
 	if (p == NULL)
 		return (NULL);
 
-	free(p);
-	return (malloc(b));
+	return (p);
 }
 
