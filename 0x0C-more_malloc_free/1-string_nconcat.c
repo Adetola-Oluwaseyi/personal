@@ -50,7 +50,10 @@ int _count(char *str)
 	int count = 0;
 
 	if (str == NULL)
+	{
+		str = "";
 		return (count);
+	}
 
 	for (; str[count]; count++)
 		continue;
