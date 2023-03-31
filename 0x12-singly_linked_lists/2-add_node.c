@@ -10,14 +10,17 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	if (str = NULL)
-		return (NULL);
-	
 	list_t *new = malloc(sizeof(list_t));
+
+	if (str == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
 
 	if (new == NULL)
 		return (NULL);
-	
+
 	new->str = strdup(str);
 	new->len = find_len(new->str);
 	new->next = *head;
