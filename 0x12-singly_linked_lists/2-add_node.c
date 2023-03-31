@@ -36,9 +36,9 @@ list_t *add_node(list_t **head, const char *str)
  *
  * Return: length of the string
  */
-int find_len(char *str)
+unsigned int find_len(char *str)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
