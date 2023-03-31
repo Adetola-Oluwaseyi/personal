@@ -12,6 +12,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
 	char *hold;
+	unsigned int i;
 
 	if (str == NULL)
 	{
@@ -23,27 +24,13 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	hold = strdup(str);
 	new->str = hold;
-	new->len = find_len(new->str);
+	for (i = 0; str[i]; i++)
+	{
+	}
+	new->len = i;
 	new->next = *head;
 
 	*head = new;
 
 	return (new);
 }
-
-/**
- * find_len - finds the length of a string
- * @str: pointer to the string
- *
- * Return: length of the string
- */
-unsigned int find_len(char *str)
-{
-	unsigned int i;
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-	}
-	return (i);
-}
-
