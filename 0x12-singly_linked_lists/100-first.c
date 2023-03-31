@@ -1,5 +1,5 @@
 #include <stdio.h>
-void __attribute__((constructor)) hare(void);
+void __attribute__((constructor)) before(void);
 
 /**
  * before - Prints a string before the main function is executed
