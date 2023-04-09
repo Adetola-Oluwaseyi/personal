@@ -1,6 +1,12 @@
 #include "main.h"
 
 /**
+ * create_file - creates a file with read and write permissions
+ * @filename: name of file to create
+ * @text_content: NULL terminated string to write to the file
+ *
+ * Return: 1 on success
+ * -1 on failure
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -15,11 +21,11 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		wr = write(op, text_content, sizeof(*text_content));
+		wr = write(op, text_content, strlen(text_content));
 		if (wr == -1)
 			return (-1);
 	}
-
+	close(op);
 	return (1);
 }
 
