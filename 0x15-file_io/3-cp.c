@@ -5,7 +5,7 @@
  *
  * Return: address to the buffer
  */
-char *buff(char *arg2)
+char *buf(char *arg2)
 {
 	char *buf = malloc(1024);
 
@@ -42,11 +42,10 @@ int open_f1(char *v)
 {
 	int fd1;
 
-	fd1 = open(argv[1], O_RDONLY);
+	fd1 = open(v, O_RDONLY);
 	if (fd1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		free(buff);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", v);
 		exit(98);
 	}
 	return (fd1);
@@ -62,11 +61,10 @@ int open_f2(char *v)
 {
 	int fd2;
 
-	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd2 = open(v, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		free(buff);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", v);
 		exit(99);
 	}
 	return (fd2);
@@ -80,8 +78,8 @@ int open_f2(char *v)
  */
 int main(int argc, char *argv[])
 {
-	int fd1, fd2, re, wr, cl1, cl2;
-	char *buff = buff(argv[2]);
+	int fd1, fd2, re, wr;
+	char *buff;
 	char *err = "Usage: cp file_from file_to\n";
 
 	if (argc != 3)
@@ -92,7 +90,7 @@ int main(int argc, char *argv[])
 	}
 	fd1 = open_f1(argv[1]);
 	fd2 = open_f2(argv[2]);
-
+	buff = buf(argv[2]);
 	while (read(fd1, buff, 1024))
 	{
 		re = read(fd1, buff, 1024);
@@ -108,9 +106,9 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
+	free(buff);
 	close_op(fd1);
 	close_op(fd2);
-	free(buff);
 	return (0);
 }
 
