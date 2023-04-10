@@ -91,9 +91,9 @@ int main(int argc, char *argv[])
 	fd1 = open_f1(argv[1]);
 	fd2 = open_f2(argv[2]);
 	buff = buf(argv[2]);
-	while (read(fd1, buff, 1024))
+	re = read(fd1, buff, 1024);
+	while (re)
 	{
-		re = read(fd1, buff, 1024);
 		if (re == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -105,6 +105,8 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
+		re = read(fd1, buff, 1024);
+		fd2 = open (argv[2], O_WRONLY | O_APPEND);
 	}
 	free(buff);
 	close_op(fd1);
