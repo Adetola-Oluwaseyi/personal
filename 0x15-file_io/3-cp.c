@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 		re = read(fd1, buff, 1024);
-		fd2 = open (argv[2], O_WRONLY | O_APPEND);
+		fd2 = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	free(buff);
 	close_op(fd1);
