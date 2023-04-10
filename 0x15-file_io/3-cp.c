@@ -81,11 +81,10 @@ int main(int argc, char *argv[])
 {
 	int fd1, fd2, re, wr;
 	char *buff;
-	char *err = "Usage: cp file_from file_to\n";
 
 	if (argc != 3)
 	{
-		write(STDERR_FILENO, err, strlen(err));
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fd1 = open_f1(argv[1]);
