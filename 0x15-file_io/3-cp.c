@@ -1,6 +1,7 @@
 #include "main.h"
+
 /**
- * buff - creates a buffer
+ * buf - creates a buffer
  * @arg2: string argument
  *
  * Return: address to the buffer
@@ -85,7 +86,6 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		write(STDERR_FILENO, err, strlen(err));
-		free(buff);
 		exit(97);
 	}
 	fd1 = open_f1(argv[1]);

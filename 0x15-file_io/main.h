@@ -9,5 +9,9 @@ int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
 int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
+int open_f1(char *v);
+int open_f2(char *v);
+void close_op(int fd);
+char *buf(char *arg2);
 
 #endif
