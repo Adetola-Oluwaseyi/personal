@@ -6,17 +6,13 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int ans, nn;
-	int i;
+	unsigned long int num = n >> 1;
+	unsigned long int ans = n & 1;
 
-	nn = n;
-	for (i = 31; i >= 0; i--)
+	if (n > 1)
 	{
-		ans = nn >> i;
-		if (ans & 1)
-			_putchar('1');
-		else
-			_putchar('0');
+		print_binary(num);
 	}
+	_putchar(ans + '0');
 }
 
